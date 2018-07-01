@@ -1,6 +1,6 @@
 # script-tools
 
-Some helpful scripts for Daily Usage.
+Some helpful scripts for daily usage.
 
 ## Ubuntu
 
