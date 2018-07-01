@@ -50,7 +50,7 @@ do
         4)  UnsetHttpProxy
             ;;
         5)  SetHttpProxy
-            mount_info="Please make sure Google Drive is accessable \(press Ctrl+C to unmount\)"
+            mount_info="Please make sure Google Drive is accessible \(press Ctrl+C to unmount\)"
             ExecuteCommand "Google Drive" "echo $mount_info;rclone mount Google-Drive: ~/Google\ Drive"
             ;;
         6)  fusermount -u ~/Google\ Drive
