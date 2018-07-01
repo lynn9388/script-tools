@@ -4,10 +4,14 @@ PS3="Please enter your choice (press q to quit): "
 options=(
     "Connect to SIAT"
     "Connect to Heroku"
+
     "Set HTTP_PROXY"
     "Unset HTTPS_PROXY"
+
     "Mount Google Drive"
     "Unmount Google Drive"
+
+    "Add ssh key to ssh-agent"
 )
 
 # Execute command in a new titled terminal
@@ -50,6 +54,8 @@ do
             ExecuteCommand "Google Drive" "echo $mount_info;rclone mount Google-Drive: ~/Google\ Drive"
             ;;
         6)  fusermount -u ~/Google\ Drive
+            ;;
+        7)  ssh-add ~/.ssh/id_rsa
             ;;
         q)  break
             ;;
