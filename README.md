@@ -13,7 +13,7 @@ Some helpful scripts for daily usage.
 
 ## Windows
 
-- [switch_ip.bat](windows/switch_ip.bat)
+- [config-ip.bat](windows/config-ip.bat)
   - Steps to avoid manually select "Run as administrator" from context menu
     - Create a shortcut for this batch
     - Click *Properties* from the context menu to open *Shortcut Properties*
