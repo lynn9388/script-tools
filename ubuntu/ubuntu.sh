@@ -24,10 +24,10 @@ export_https_proxy="export HTTPS_PROXY='socks5://localhost:1080'"
 
 SetHttpProxy() {
     UnsetHttpProxy
-    echo $export_http_proxy >> ~/.bashrc
-    echo $export_https_proxy >> ~/.bashrc
-    eval "$export_http_proxy"
-    eval "$export_https_proxy"
+    echo "${export_http_proxy}" >> ~/.bashrc
+    echo "${export_https_proxy}" >> ~/.bashrc
+    eval "${export_http_proxy}"
+    eval "${export_https_proxy}"
 }
 
 UnsetHttpProxy() {
@@ -36,9 +36,8 @@ UnsetHttpProxy() {
     unset https_proxy
 }
 
-select option in "${options[@]}"
-do
-    case "$REPLY" in
+select option in "${options[@]}"; do
+    case "${REPLY}" in
         1)  pkill -f glider
             ExecuteCommand "SIAT" "glider -listen mixed://localhost:1080 -forward ss://CHACHA20-IETF:PASSWORD@192.168.127.128:8388 -verbose"
             ;;
