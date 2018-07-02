@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # Launch rslsync if it's not running
-ps -A | grep rslsync
-if [ $(ps -A | grep -c rslsync) -ne 1 ]; then
-    cd ~/Documents/Sync/
-    sudo ./rslsync
-fi
+LaunchSync() {
+    ps -A | grep rslsync
+    if [ $(ps -A | grep -c rslsync) -ne 1 ]; then
+        cd ~/Documents/Sync
+        sudo ./rslsync
+    fi
+}
 
 # Compress every virtual machine folder
 TarVM() {
@@ -20,6 +22,7 @@ TarVM() {
     done
 }
 
+LaunchSync
 DIR=~/Backup/$(date +"%Y-%m-%d_%H%M%S")
 mkdir -p "$DIR"/Shared\ VMs
-TarVM ~/vmware/ "$DIR"
+TarVM ~/vmware "$DIR"
