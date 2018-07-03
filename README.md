@@ -10,6 +10,8 @@ Some helpful scripts for daily usage.
 - [backup.sh](ubuntu/backup.sh)
   - Compress every virtual machine folder for VMware
   - Use [Resilio Sync Home](https://www.resilio.com/) to backup data
+- [config-ip.sh](ubuntu/config-ip.sh)
+  - Config static IP for Ubuntu Server 18.04
 
 ## Windows
 
