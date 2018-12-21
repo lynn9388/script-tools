@@ -2,14 +2,13 @@
 
 PS3="Please enter your choice (press q to quit): "
 options=(
-    "Connect to SIAT"
-    "Connect to Heroku"
+    "Heroku"
+    "HTTP/SOCKS5"
+    "Shadowsocks"
+    "Local"
 
     "Set HTTP_PROXY"
     "Unset HTTPS_PROXY"
-
-    "Mount Google Drive"
-    "Unmount Google Drive"
 
     "Add ssh key to ssh-agent"
 )
@@ -38,21 +37,17 @@ UnsetHttpProxy() {
 
 select option in "${options[@]}"; do
     case "${REPLY}" in
-        1)  pkill -f glider
-            ExecuteCommand "SIAT" "glider -listen mixed://localhost:1080 -forward ss://CHACHA20-IETF:PASSWORD@192.168.127.128:8388 -verbose"
+        1)  ExecuteCommand "Heroku" "cd ~/Documents/Git/shadowsocks-heroku;node local.js"
             ;;
-        2)  pkill -f glider
-            ExecuteCommand "Heroku" "glider -listen mixed://localhost:1080 -forward ss://CHACHA20-IETF:PASSWORD@192.168.127.128:8488 -verbose"
+        2)  ExecuteCommand "HTTP/SOCKS5" "glider -listen mixed://:1080 -forward socks5://127.0.0.1:1081 -verbose"
             ;;
-        3)  SetHttpProxy
+        3)  ExecuteCommand "Shadowsocks" "glider -listen ss://CHACHA20-IETF:PASSWORD@:8488 -forward socks5://127.0.0.1:1081 -verbose"
             ;;
-        4)  UnsetHttpProxy
+        4)  ExecuteCommand "Local" "glider -listen ss://CHACHA20-IETF:PASSWORD@:8388 -verbose"
             ;;
         5)  SetHttpProxy
-            mount_info="Please make sure Google Drive is accessible \(press Ctrl+C to unmount\)"
-            ExecuteCommand "Google Drive" "echo $mount_info;rclone mount Google-Drive: ~/Google\ Drive"
             ;;
-        6)  fusermount -u ~/Google\ Drive
+        6)  UnsetHttpProxy
             ;;
         7)  ssh-add ~/.ssh/id_rsa
             ;;

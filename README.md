@@ -6,12 +6,13 @@ Some helpful scripts for daily usage.
 
 - [ubuntu.sh](ubuntu/ubuntu.sh)
   - Use [glider](https://github.com/nadoo/glider) to connect to proxy server
-  - Use [rclone](https://github.com/ncw/rclone) to mount Google Drive
 - [backup.sh](ubuntu/backup.sh)
   - Compress every virtual machine folder for VMware
   - Use [Resilio Sync Home](https://www.resilio.com/) to backup data
 - [config-ip.sh](ubuntu/config-ip.sh)
   - Config static IP for Ubuntu Server 18.04
+- [network-util.sh](ubuntu/network-util.sh)
+  - Test if an IP address is valid
 
 ## Windows
 
