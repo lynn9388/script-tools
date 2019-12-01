@@ -7,6 +7,9 @@ curl -O https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.g
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+curl -O https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/zsh/_docker
+curl -O https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine
 curl -O https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose
 
 git config --global user.name Lynn
