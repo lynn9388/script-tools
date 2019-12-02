@@ -40,17 +40,18 @@ autoload -U colors && colors
 setopt PROMPT_SUBST ; PS1='%{$fg[red]%}%n%{$fg[green]%}$(__git_ps1 " (%s)") %{$fg[blue]%}%c $%{$reset_color%} '
 ############################## Git ##############################
 
-export PATH=$PATH:"/Applications/Sublime Text.app/Contents/SharedSupport/bin/":
+export PATH=$PATH:"/Users/lynn/Documents/LaTex/bin:/Users/lynn/Documents/Blog/bin":
 
-alias heroku1="cd /Users/lynn/Documents/Coding/heroku/1/;./heroku"
-alias heroku2="cd /Users/lynn/Documents/Coding/heroku/2/;./heroku"
-alias heroku3="cd /Users/lynn/Documents/Coding/heroku/3/;./heroku"
+alias heroku1="cd /Users/lynn/Documents/Code/heroku/1/;./heroku"
+alias heroku2="cd /Users/lynn/Documents/Code/heroku/2/;./heroku"
+alias heroku3="cd /Users/lynn/Documents/Code/heroku/3/;./heroku"
 
 alias gitl="git log --oneline --graph"
 alias gits="git status"
 
 alias ping2.2="ping 192.168.2.2"
 alias ping2.3="ping 192.168.2.3"
+alias ping2.4="ping 192.168.2.4"
 alias ssh2.2="ssh -D 1091 lynn@192.168.2.2"
 alias ssh2.3="ssh lynn@192.168.2.3"
 
