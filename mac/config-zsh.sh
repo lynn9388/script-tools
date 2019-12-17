@@ -12,6 +12,12 @@ curl -O https://raw.githubusercontent.com/docker/docker-ce/master/components/cli
 curl -O https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine
 curl -O https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose
 
+mkdir -p ~/.zsh/bin
+cd ~/.zsh/bin
+
+curl -O https://raw.githubusercontent.com/paulirish/git-open/master/git-open
+chmod a+x git-open
+
 git config --global user.name Lynn
 git config --global user.email lynn9388@gmail.com
 git config --global merge.conflictStyle diff3
@@ -40,7 +46,7 @@ autoload -U colors && colors
 setopt PROMPT_SUBST ; PS1='%{$fg[red]%}%n%{$fg[green]%}$(__git_ps1 " (%s)") %{$fg[blue]%}%c $%{$reset_color%} '
 ############################## Git ##############################
 
-export PATH=$PATH:"/Users/lynn/Documents/LaTex/bin:/Users/lynn/Documents/Blog/bin":
+export PATH=$PATH:"/Users/lynn/.zsh/bin:/Users/lynn/Documents/LaTex/bin:/Users/lynn/Documents/Blog/bin":
 
 alias heroku1="cd /Users/lynn/Documents/Code/heroku/1/;./heroku"
 alias heroku2="cd /Users/lynn/Documents/Code/heroku/2/;./heroku"
