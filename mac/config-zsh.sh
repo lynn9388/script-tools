@@ -46,11 +46,12 @@ autoload -U colors && colors
 setopt PROMPT_SUBST ; PS1='%{$fg[red]%}%n%{$fg[green]%}$(__git_ps1 " (%s)") %{$fg[blue]%}%c $%{$reset_color%} '
 ############################## Git ##############################
 
-export PATH=$PATH:"/Users/lynn/.zsh/bin:/Users/lynn/Documents/LaTex/bin:/Users/lynn/Documents/Blog/bin":
+export GOPATH=~/Go:~/Documents/Code/go
+export PATH=$PATH:/usr/local/go/bin:${GOPATH//://bin:}/bin:~/.zsh/bin:~/Documents/LaTex/bin:~/Documents/Blog/bin:
 
-alias heroku1="cd /Users/lynn/Documents/Code/heroku/1/;./heroku"
-alias heroku2="cd /Users/lynn/Documents/Code/heroku/2/;./heroku"
-alias heroku3="cd /Users/lynn/Documents/Code/heroku/3/;./heroku"
+alias heroku1="cd ~/Documents/Code/heroku/1/;./heroku"
+alias heroku2="cd ~/Documents/Code/heroku/2/;./heroku"
+alias heroku3="cd ~/Documents/Code/heroku/3/;./heroku"
 
 alias gitl="git log --oneline --graph"
 alias gits="git status"
