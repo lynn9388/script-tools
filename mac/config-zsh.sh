@@ -52,6 +52,7 @@ export PATH=$PATH:/usr/local/go/bin:${GOPATH//://bin:}/bin:~/.zsh/bin:~/Document
 alias heroku1="cd ~/Documents/Code/heroku/1/;./heroku"
 alias heroku2="cd ~/Documents/Code/heroku/2/;./heroku"
 alias heroku3="cd ~/Documents/Code/heroku/3/;./heroku"
+alias heroku4="cd ~/Documents/Code/heroku/4/;./heroku"
 
 alias gitl="git log --oneline --graph"
 alias gits="git status"
